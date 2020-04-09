@@ -218,38 +218,17 @@
     </div>
 </section>
     
-<div class="checkingOfSending">
-
-    <div class="row">
-        <div class="col-sm-4">
-            <form action="telegram.php" method="POST">
-                <legend>Заголовок формы</legend>
-
-                <div class="form-group">
-                    <label for="">Введите ваше имя</label>
-                    <input type="text" class="form-control" id="" name="user_name" placeholder="Например, Иван">
-                </div>
-
-                <div class="form-group">
-                    <label for="">Введите номер телефона</label>
-                    <input type="text" class="form-control" id="" name="user_phone" placeholder="+38 (999) 99 99 999">
-                </div>
-
-                <div class="form-group">
-                    <label for="">Введите email</label>
-                    <input type="text" class="form-control" id="" name="user_email" placeholder="mail@gmail.com">
-                </div>
-
-                <button type="submit" class="btn btn-primary">Отправить форму</button>
-            </form>
-        </div><!-- .col-sm-4 -->
-    </div> <!-- .row -->
-
-</div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-<script src="http://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+ <div class="form__wrapper">
+      <form id="form-contact" method="POST" class="form-element" autocomplete="off" action="telegram.php">
+          <p class="form-title">Закажите обратный звонок и наш консультант свяжется с вами</p>
+          <p class="form-message"></p>
+          <input name="name" type="text" class="form-input__name" tabindex="0" placeholder="Введите ваше имя" required>
+          <input name="phone" type="tel" class="form-input__phone" tabindex="0" pattern="^[ 0-9]+$" placeholder="Введите ваш телефон" required>
+          <input name="email" type="text" class="form-input__email" tabindex="0" placeholder="Введите ваш email" required>
+<!--          <input name="theme" type="hidden" class="form-input__theme"  value="Заявка с сайта">-->
+          <input type="submit" class="form-input__button" value="Отправить">
+      </form>
+  </div>
 <script src="dist/js/script.js"></script>
 
 </body>
